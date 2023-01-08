@@ -5,6 +5,7 @@ FROM $BUILD_FROM
 # Largely inspired from Dockerfile at https://github.com/linuxserver/docker-ddclient/blob/master/Dockerfile.aarch64
 # Adapted for home-assistant add-on
 
+# 3.10.0+ is a big rewrite.
 ARG DDCLIENT_VERSION=v3.9.1
 
 RUN \
@@ -32,7 +33,7 @@ RUN \
     Data::Validate::IP \
     JSON::Any && \
   echo "**** install ddclient ****" && \
-  if [ -z ${DDCLIENT_VERSION+x} ]; then \
+  if [ -z ${DDCLIENT_VERSION} ]; then \
     DDCLIENT_VERSION=$(curl -sX GET "https://api.github.com/repos/ddclient/ddclient/releases/latest" \
     | awk '/tag_name/{print $4;exit}' FS='[""]'); \
   fi && \
@@ -41,10 +42,10 @@ RUN \
   curl -o \
   /tmp/ddclient.tar.gz -L \
     "https://github.com/ddclient/ddclient/archive/${DDCLIENT_VERSION}.tar.gz" && \
-  tar xf \
+  tar xvf \
   /tmp/ddclient.tar.gz -C \
     /tmp/ddclient --strip-components=1 && \
-  cp /tmp/ddclient/ddclient /usr/bin/ddclient \
+  cp /tmp/ddclient/ddclient /usr/bin/ddclient && \
   # below for 3.10.0+
   # cp /tmp/ddclient/ddclient.in /usr/bin/ddclient.in && \
   # ln -s /usr/bin/ddclient.in /usr/bin/ddclient && \
