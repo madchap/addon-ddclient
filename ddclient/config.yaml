@@ -3,13 +3,13 @@ name: ddclient add-on
 version: "0.1"
 slug: ddclient
 description: ddclient add-on
-url: "https://github.com/madchap/addon-ddclient/tree/main/example"
+url: "https://github.com/madchap/addon-ddclient/tree/main/ddclient"
 arch:
   - aarch64
   - amd64
 init: false
 map:
-  - share:rw
+  - share
 options:
   message: "Hello ddclient..."
 schema:
