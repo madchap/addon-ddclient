@@ -2,6 +2,8 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+# Largely inspired from Dockerfile at https://github.com/linuxserver/docker-ddclient/blob/master/Dockerfile.aarch64
+# Adapted for home-assistant add-on
 
 RUN \
   echo "**** Install build packages ****" && \
