@@ -44,8 +44,10 @@ RUN \
   tar xf \
   /tmp/ddclient.tar.gz -C \
     /tmp/ddclient --strip-components=1 && \
-  cp /tmp/ddclient/ddclient.in /usr/bin/ddclient.in && \
-  ln -s /usr/bin/ddclient.in /usr/bin/ddclient && \
+  cp /tmp/ddclient/ddclient /usr/bin/ddclient \
+  # below for 3.10.0+
+  # cp /tmp/ddclient/ddclient.in /usr/bin/ddclient.in && \
+  # ln -s /usr/bin/ddclient.in /usr/bin/ddclient && \
   mkdir -p /etc/ddclient/ && \
   cp /tmp/ddclient/sample-get-ip-from-fritzbox /etc/ddclient/get-ip-from-fritzbox && \
   echo "**** cleanup ****" && \
