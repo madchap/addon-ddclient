@@ -57,4 +57,4 @@ RUN \
 COPY rootfs /
 
 # ports and volumes
-VOLUME /config
+VOLUME /data
