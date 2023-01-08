@@ -14,4 +14,4 @@ options:
   message: "Hello ddclient..."
 schema:
   message: "str?"
-image: "ghcr.io/home-assistant/{arch}-addon-ddclient"
+image: "ghcr.io/madchap/{arch}-addon-ddclient"
