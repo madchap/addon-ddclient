@@ -11,7 +11,7 @@ init: false
 map:
   - share
 options:
-  message: "Hello ddclient..."
+  message: "All options go directly in the file at /share/ddclient/ddclient.conf"
 schema:
   message: "str?"
 image: "ghcr.io/madchap/{arch}-addon-ddclient"
