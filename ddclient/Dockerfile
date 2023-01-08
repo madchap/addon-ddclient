@@ -5,6 +5,8 @@ FROM $BUILD_FROM
 # Largely inspired from Dockerfile at https://github.com/linuxserver/docker-ddclient/blob/master/Dockerfile.aarch64
 # Adapted for home-assistant add-on
 
+ARG DDCLIENT_VERSION=3.9.0
+
 RUN \
   echo "**** Install build packages ****" && \
   apk add --no-cache --virtual=build-dependencies \
