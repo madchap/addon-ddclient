@@ -6,7 +6,7 @@ FROM $BUILD_FROM
 # Adapted for home-assistant add-on
 
 # 3.10.0+ is a big rewrite.
-ARG DDCLIENT_VERSION=v3.9.1
+ARG DDCLIENT_VERSION=v3.9.0
 
 RUN \
   echo "**** Install build packages ****" && \
