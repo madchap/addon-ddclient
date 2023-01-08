@@ -1,0 +1,17 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: ddclient add-on
+version: "0.1"
+slug: ddclient
+description: ddclient add-on
+url: "https://github.com/home-assistant/addons-example/tree/main/example"
+arch:
+  - aarch64
+  - amd64
+init: false
+map:
+  - share:rw
+options:
+  message: "Hello ddclient..."
+schema:
+  message: "str?"
+image: "ghcr.io/home-assistant/{arch}-addon-ddclient"
