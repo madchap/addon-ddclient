@@ -3,7 +3,7 @@ name: ddclient add-on
 version: "0.1"
 slug: ddclient
 description: ddclient add-on
-url: "https://github.com/home-assistant/addons-example/tree/main/example"
+url: "https://github.com/madchap/addon-ddclient/tree/main/example"
 arch:
   - aarch64
   - amd64
