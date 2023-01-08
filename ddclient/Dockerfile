@@ -2,9 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
-
 ARG DDCLIENT_VERSION
-ARG TEMPIO_VERSION BUILD_ARCH
 
 RUN \
   echo "**** Install build packages ****" && \
@@ -56,7 +54,7 @@ RUN \
     /tmp/*
 
 # copy local files
-COPY rootfs/ /
+COPY rootfs /
 
 # ports and volumes
 VOLUME /config
